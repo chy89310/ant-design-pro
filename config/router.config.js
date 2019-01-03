@@ -18,7 +18,12 @@ export default [
     authority: ['admin', 'user'],
     routes: [
       // dashboard
-      { path: '/', redirect: '/dashboard/analysis' },
+      {
+        path: '/',
+        name: 'home',
+        icon: 'home',
+        component: './Home/Home',
+      },
       {
         path: '/dashboard',
         name: 'dashboard',
@@ -40,6 +45,12 @@ export default [
             component: './Dashboard/Workplace',
           },
         ],
+      },
+      {
+        path: '/order',
+        name: 'order',
+        hideInMenu: true,
+        routes: [{ path: '/order/create', component: './Order/CreateOrder' }],
       },
       // forms
       {
