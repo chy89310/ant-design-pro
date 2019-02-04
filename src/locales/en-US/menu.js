@@ -35,4 +35,8 @@ export default {
   'menu.account.settings': 'Account Settings',
   'menu.account.trigger': 'Trigger Error',
   'menu.account.logout': 'Logout',
+  'menu.purchase_applecare': 'Registration',
+  'menu.purchase_applecare.verify': 'Verify',
+  'menu.purchase_applecare.confirm': 'Confirm',
+  'menu.purchase_applecare.result': 'Result',
 };
