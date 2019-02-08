@@ -17,17 +17,118 @@ export default [
     Routes: ['src/pages/Authorized'],
     authority: ['admin', 'user'],
     routes: [
+      {
+        path: '/order',
+        name: 'purchase_applecare',
+        icon: 'apple',
+        component: './Orders/Create',
+        hideChildrenInMenu: true,
+        routes: [
+          {
+            path: '/order',
+            redirect: '/order/info',
+          },
+          {
+            path: '/order/info',
+            name: 'verify',
+            component: './Orders/Create/Verify',
+          },
+          {
+            path: '/order/confirm',
+            name: 'confirm',
+            component: './Orders/Create/Confirm',
+          },
+          {
+            path: '/order/result',
+            name: 'result',
+            component: './Orders/Create/Result',
+          },
+        ],
+      },
+      {
+        path: '/cancel',
+        name: 'cancel_applecare',
+        icon: 'close-circle',
+        component: './Orders/Cancel',
+        hideChildrenInMenu: true,
+        routes: [
+          {
+            path: '/cancel',
+            redirect: '/cancel/info',
+          },
+          {
+            path: '/cancel/info',
+            name: 'verify',
+            component: './Orders/Cancel/Verify',
+          },
+          {
+            path: '/cancel/confirm',
+            name: 'confirm',
+            component: './Orders/Cancel/Confirm',
+          },
+          {
+            path: '/cancel/result',
+            name: 'result',
+            component: './Orders/Cancel/Result',
+          },
+        ],
+      },
+      {
+        path: '/poc',
+        name: 'poc_lookup',
+        icon: 'search',
+        component: './Orders/Poc',
+        hideChildrenInMenu: true,
+        routes: [
+          {
+            path: '/poc',
+            redirect: '/poc/info',
+          },
+          {
+            path: '/poc/info',
+            name: 'verify',
+            component: './Orders/Poc/Verify',
+          },
+          {
+            path: '/poc/confirm',
+            name: 'confirm',
+            component: './Orders/Poc/Confirm',
+          },
+        ],
+      },
+      {
+        path: '/360',
+        name: '360_lookup',
+        icon: 'file-search',
+        component: './Orders/360',
+        hideChildrenInMenu: true,
+        routes: [
+          {
+            path: '/360',
+            redirect: '/360/info',
+          },
+          {
+            path: '/360/info',
+            name: 'verify',
+            component: './Orders/360/Verify',
+          },
+          {
+            path: '/360/confirm',
+            name: 'confirm',
+            component: './Orders/360/Confirm',
+          },
+        ],
+      },
       // dashboard
       {
         path: '/',
-        name: 'home',
-        icon: 'home',
-        component: './Home/Home',
+        redirect: '/order/info',
       },
       {
         path: '/dashboard',
         name: 'dashboard',
         icon: 'dashboard',
+        hideInMenu: true,
         routes: [
           {
             path: '/dashboard/analysis',
@@ -46,17 +147,12 @@ export default [
           },
         ],
       },
-      {
-        path: '/order',
-        name: 'order',
-        hideInMenu: true,
-        routes: [{ path: '/order/create', component: './Order/CreateOrder' }],
-      },
       // forms
       {
         path: '/form',
         icon: 'form',
         name: 'form',
+        hideInMenu: true,
         routes: [
           {
             path: '/form/basic-form',
@@ -103,6 +199,7 @@ export default [
         path: '/list',
         icon: 'table',
         name: 'list',
+        hideInMenu: true,
         routes: [
           {
             path: '/list/table-list',
@@ -151,6 +248,7 @@ export default [
         path: '/profile',
         name: 'profile',
         icon: 'profile',
+        hideInMenu: true,
         routes: [
           // profile
           {
@@ -170,6 +268,7 @@ export default [
         name: 'result',
         icon: 'check-circle-o',
         path: '/result',
+        hideInMenu: true,
         routes: [
           // result
           {
@@ -184,6 +283,7 @@ export default [
         name: 'exception',
         icon: 'warning',
         path: '/exception',
+        hideInMenu: true,
         routes: [
           // exception
           {
@@ -213,6 +313,7 @@ export default [
         name: 'account',
         icon: 'user',
         path: '/account',
+        hideInMenu: true,
         routes: [
           {
             path: '/account/center',
