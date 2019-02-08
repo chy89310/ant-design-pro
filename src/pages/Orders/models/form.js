@@ -20,6 +20,14 @@ export default {
       });
       yield put(routerRedux.push('/order/result'));
     },
+    *cancelOrder({ payload }, { call, put }) {
+      yield call(fakeSubmitForm, payload);
+      yield put({
+        type: 'saveStepFormData',
+        payload,
+      });
+      yield put(routerRedux.push('/cancel/result'));
+    },
   },
 
   reducers: {
