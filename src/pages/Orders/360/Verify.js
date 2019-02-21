@@ -6,10 +6,14 @@ import styles from '../style.less';
 
 const formItemLayout = {
   labelCol: {
-    span: 5,
+    xl: { span: 5 },
+    lg: { span: 5 },
+    md: { span: 5 },
   },
   wrapperCol: {
-    span: 19,
+    xl: { span: 19 },
+    lg: { span: 19 },
+    md: { span: 19 },
   },
 };
 
