@@ -13,6 +13,10 @@ export async function queryRule(params) {
   return request(`/api/rule?${stringify(params)}`);
 }
 
+export async function queryAdmin(params) {
+  return request(`/api/admin?${stringify(params)}`);
+}
+
 export async function removeRule(params) {
   return request('/api/rule', {
     method: 'POST',
@@ -35,6 +39,16 @@ export async function addRule(params) {
 
 export async function updateRule(params) {
   return request('/api/rule', {
+    method: 'POST',
+    body: {
+      ...params,
+      method: 'update',
+    },
+  });
+}
+
+export async function updateAdmin(params) {
+  return request('/api/admin', {
     method: 'POST',
     body: {
       ...params,

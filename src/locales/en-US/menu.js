@@ -51,4 +51,6 @@ export default {
   'menu.360_lookup.verify': 'Verify',
   'menu.360_lookup.confirm': 'Confirm',
   'menu.360_lookup.result': 'Result',
+  'menu.admin': 'Admin',
+  'menu.report': 'Report',
 };

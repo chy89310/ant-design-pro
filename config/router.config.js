@@ -119,6 +119,18 @@ export default [
           },
         ],
       },
+      {
+        path: '/report',
+        name: 'report',
+        icon: 'file-text',
+        component: './Report/ReportList',
+      },
+      {
+        path: '/admin',
+        name: 'admin',
+        icon: 'team',
+        component: './Admin/AdminList',
+      },
       // dashboard
       {
         path: '/',
